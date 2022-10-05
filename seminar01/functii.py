@@ -32,3 +32,5 @@ def criteriu_sortare(x):
 
 def criteriu_sortare_lambda(x, *k): # echivalent cu criteriu_sortare_lambda(x, a, b, c, d, e...)
     return x[1][k[0]]
+# *k = tuplu
+# **p = dictionar; f(**p) == f(a=100, b=v...)
