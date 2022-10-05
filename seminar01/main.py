@@ -32,4 +32,7 @@ for v in tabel2:
     print(v)
 
 # Cerinta 3
-
+print("Cerinta 3")
+tabel3 = [v for v in zip(nume_variabile, calcul_indicatori(tabel_))]
+for v in tabel3:
+    print(v)
