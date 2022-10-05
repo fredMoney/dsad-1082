@@ -44,3 +44,20 @@ print("\nCerinta 4")
 tabel4 = [v for v in filter(filtru, zip(nume_instante, tabel.values()))]
 for v in tabel4:
     print(v[0])
+
+# Cerinta 5
+print("\nCerinta 5")
+tabel5 = sorted(zip(nume_instante, tabel.values()), key=criteriu_sortare,
+                reverse=True)
+for v in tabel5:
+    print(v)
+
+# Cerinta 5 lambda
+print("\nCerinta 5 lambda")
+variabila_sortare = "C"
+k = nume_variabile.index(variabila_sortare)
+tabel5_ = sorted(zip(nume_instante, tabel.values()),
+                 key=lambda x: criteriu_sortare_lambda(x, k),
+                 reverse=True)
+for v in tabel5_:
+    print(v)

@@ -26,3 +26,9 @@ def calcul_indicatori(tabel, nlib=0):
 
 def filtru(x): # x = element din tabel
     return x[1][4] > 10
+
+def criteriu_sortare(x):
+    return x[1][4]
+
+def criteriu_sortare_lambda(x, *k): # *k = tuplu
+    return x[1][k[0]]
