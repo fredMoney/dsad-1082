@@ -61,3 +61,13 @@ tabel5_ = sorted(zip(nume_instante, tabel.values()),
                  reverse=True)
 for v in tabel5_:
     print(v)
+
+# Cerinta 6
+print("\nCerinta 6")
+variabile_selectate = ["C", "C_Test", "Java", "Java_test"]
+j = [] # j = lista indecsi
+for v in variabile_selectate:
+    j.append(nume_variabile.index(v))
+tabel6 = [v for v in zip(nume_instante, map(lambda x:selector(x, j), tabel.values()))]
+for v in tabel6:
+    print(v)

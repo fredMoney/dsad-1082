@@ -34,3 +34,13 @@ def criteriu_sortare_lambda(x, *k): # echivalent cu criteriu_sortare_lambda(x, a
     return x[1][k[0]]
 # *k = tuplu
 # **p = dictionar; f(**p) == f(a=100, b=v...)
+
+# selecteaza din x valorile cu cheile in *k
+def selector(x, *k):
+    valori_selectate = []
+    for i in k[0]:
+        valori_selectate.append(x[i])
+    return valori_selectate
+#
+# def salvare(nume_fisier="output.csv"):
+#
