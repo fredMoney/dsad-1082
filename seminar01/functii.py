@@ -30,5 +30,5 @@ def filtru(x): # x = element din tabel
 def criteriu_sortare(x):
     return x[1][4]
 
-def criteriu_sortare_lambda(x, *k): # *k = tuplu
+def criteriu_sortare_lambda(x, *k): # echivalent cu criteriu_sortare_lambda(x, a, b, c, d, e...)
     return x[1][k[0]]
