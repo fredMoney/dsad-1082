@@ -71,4 +71,4 @@ for v in variabile_selectate:
 tabel6 = [v for v in zip(nume_instante, map(lambda x:selector(x, j), tabel.values()))]
 for v in tabel6:
     print(v)
-salvare(tabel6, nume_index, nume_variabile, "out\cerinta6.csv")
+salvare(tabel6, nume_index, nume_variabile, "cerinta6.csv")
