@@ -43,7 +43,7 @@ for v in tabel3:
 print("\nCerinta 4")
 tabel4 = [v for v in filter(filtru, zip(nume_instante, tabel.values()))]
 for v in tabel4:
-    print(v[0])
+    print(v)
 
 # Cerinta 5
 print("\nCerinta 5")
@@ -71,3 +71,4 @@ for v in variabile_selectate:
 tabel6 = [v for v in zip(nume_instante, map(lambda x:selector(x, j), tabel.values()))]
 for v in tabel6:
     print(v)
+salvare(tabel6, nume_index, nume_variabile, "out\cerinta6.csv")

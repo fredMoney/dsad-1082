@@ -41,6 +41,13 @@ def selector(x, *k):
     for i in k[0]:
         valori_selectate.append(x[i])
     return valori_selectate
-#
-# def salvare(nume_fisier="output.csv"):
-#
+
+def salvare(tabel, nume_index, nume_variabile, nume_fisier="output.csv"):
+    fisier = open(nume_fisier, "w")
+    # sir.join(lista) = concat elementele listei folosind sir ca si despartitor
+    fisier.write(nume_index + "," + ",".join(nume_variabile) + "\n")
+    for v in tabel:
+        fisier.write(v[0] + ",")
+        fisier.write(",".join( [str(v_) for v_ in v[1]] ))
+        fisier.write("\n")
+    fisier.close()
