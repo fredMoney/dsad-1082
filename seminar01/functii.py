@@ -23,3 +23,6 @@ def calcul_indicatori(tabel, nlib=0):
         cvar = std / media
         indicatori.append( (media, std, cvar) )
     return indicatori
+
+def filtru(x): # x = element din tabel
+    return x[1][4] > 10

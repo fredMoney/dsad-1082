@@ -6,6 +6,7 @@ linii = fisier.readlines()
 fisier.close()
 
 # Cerinta 1
+print("Cerinta 1")
 linie_variabile = linii[0][:-1].split(",")
 # print(linie_variabile)
 nume_index = linie_variabile[0]
@@ -27,12 +28,19 @@ nume_variabile = list(tabel_.keys())
 # print(nume_variabile,type(nume_variabile),sep="\n")
 
 # Cerinta 2
+print("\nCerinta 2")
 tabel2 = [v for v in zip(nume_instante,calcul_maxim(tabel,nume_variabile))]
 for v in tabel2:
     print(v)
 
 # Cerinta 3
-print("Cerinta 3")
+print("\nCerinta 3")
 tabel3 = [v for v in zip(nume_variabile, calcul_indicatori(tabel_))]
 for v in tabel3:
     print(v)
+
+# Cerinta 4
+print("\nCerinta 4")
+tabel4 = [v for v in filter(filtru, zip(nume_instante, tabel.values()))]
+for v in tabel4:
+    print(v[0])
