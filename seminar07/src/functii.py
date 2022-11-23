@@ -49,7 +49,7 @@ def corelograma(r, vmin=-1, cmap="RdYlBu", titlu="Corelatii factoriale"):
     fig = plt.figure(figsize=(9, 6))
     ax = fig.add_subplot(1, 1, 1) # ax -> obiectul axa
     ax.set_title(titlu, fontdict = {"fontsize": 16, "color": "b"})
-    heatmap(r, vmin=vmin, cmap=cmap, annot=True, ax=ax)
+    heatmap(r, vmin=vmin, cmap=cmap, annot=False, ax=ax)
 
 
 def plot_instante(t, k1=0, k2=1, titlu="Plot instante"):

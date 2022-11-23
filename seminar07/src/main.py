@@ -1,3 +1,5 @@
+import numpy as np
+
 from functii import *
 from acp import *
 import pandas as pd
@@ -29,4 +31,21 @@ k = min([v for v in criterii if v is not None]) + 1 # k -> nr de comps. semnific
 print(k)
 
 plot_instante(t_c)
+
+# Calculul cosinusuri
+c2= c*c
+cosin = (c2.T/np.sum(c2, axis=1)).T
+pd.DataFrame(cosin, t_c.index, t_c.columns).to_csv("..//data//cosin.csv")
+
+# Calcul contributii
+q = c2/np.sum(c2, axis=0)
+pd.DataFrame(q,t_c.index, t_c.columns).to_csv("..//data//q.csv")
+
+# Comunalitati
+r2 = r*r
+comm = np.cumsum(r2, axis=1)
+t_comm = pd.DataFrame(comm,t_r.index, t_r.columns)
+t_comm.to_csv("..//data//comm.csv")
+corelograma(t_comm, 0, titlu="Comunalitati")
+
 show()
